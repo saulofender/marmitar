@@ -1,0 +1,60 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# Pacote Marmitar
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+O objetivo do pacote é disponibilizar a base de dados de marmitas veganas.
+
+Os dados foram obtidos no site [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas).
+
+
+## Instalação
+
+Este pacote pode ser instalado através do [GitHub](https://github.com/) utilizando o seguinte código abaixo em `R`:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("saulofender/marmitar")
+library(marmitar)
+```
+
+## Exemplo
+
+É possível buscar a base de marmitas veganas usando a função abaixo:
+
+```{r example}
+marmitas_veganas <- marmitar::buscar_marmitas_veganas()
+```
+
+Caso queira você também poderá usar a função `sortear_marmita()`para sortear uma marmita:
+
+```{r}
+# só uma sopinha:
+marmitar::sortear_marmita(tipo = "Sopa")
+
+# só quero gastar R$:
+marmitar::sortear_marmita(preco_maximo = 22)
+```
+
+E por fim, também é possível sortear combos de 12, 21 ou 30 marmitas com a função `sortear_combo_marmitas()`
+
+```{r}
+# sortear um combo de 12 marmitas
+marmitar::sortear_combo_marmitas(12)
+```
+
