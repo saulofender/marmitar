@@ -7,9 +7,7 @@
 <!-- badges: end -->
 
 O objetivo do pacote é disponibilizar a base de dados de marmitas
-veganas.
-
-Os dados foram obtidos no site
+veganas. Os dados foram obtidos no site
 [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas).
 
 ## Instalação
@@ -37,23 +35,23 @@ sortear uma marmita:
 ``` r
 # só uma sopinha:
 marmitar::sortear_marmita(tipo = "Sopa")
-#> Refeicao  sugerida: Minestrone 
+#> Refeicao  sugerida: Frango Vegetal Desfiado com Creme de Milho 
 #> 
-#> Ingredientes: Espinafre, abobrinha e feijão branco 
+#> Ingredientes: 340 g | Vagem e espinafre refogados. 
 #> 
-#> Preco: R$ 16.9 
+#> Preco: R$ 30.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/minestrone
+#> Acesse o site: https://www.beleaf.com.br/frango-vegetal-desfiado-com-creme-de-milho
 
 # só quero gastar até R$:
 marmitar::sortear_marmita(preco_maximo = 22)
-#> Refeicao  sugerida: Bolo de Banana com Amêndoas e Sem Açúcar 
+#> Refeicao  sugerida: Torta de Maçã com Especiarias 
 #> 
-#> Ingredientes: Aveia, Linhaça, Chia E Canela - Sem Açúcar 
+#> Ingredientes: Açúcar Demerara, Aveia e Linhaça 
 #> 
 #> Preco: R$ 8.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/bolo-de-banana-com-am-ndoas-e-sem-acucar
+#> Acesse o site: https://www.beleaf.com.br/torta-de-mac-com-especiarias
 ```
 
 E por fim, também é possível sortear combos de 12, 21 ou 30 marmitas com
@@ -63,18 +61,18 @@ a função `sortear_combo_marmitas()`
 # sortear um combo de 12 marmitas
 marmitar::sortear_combo_marmitas(12)
 #> # A tibble: 12 x 6
-#>    item  nome                               descricao  preco tipo_refeicao url  
-#>    <chr> <chr>                              <chr>      <dbl> <chr>         <chr>
-#>  1 15    Baião de Dois                      310 g | M~  27.7 Prato         http~
-#>  2 22    Poke de Atum do Futuro™            360 g | E~  29.9 Prato         http~
-#>  3 34    Cheesecake de Amora                Biomassa ~  10.5 Doce          http~
-#>  4 3     Sugestão do Chef                   5 refeiçõ~ 154.  Prato         http~
-#>  5 17    Moqueca de Coração de Pupunha      360 g | A~  29.9 Prato         http~
-#>  6 29    Couve-Flor e Grão de Bico ao Curry 360 g | C~  24.9 Prato         http~
-#>  7 28    Almôndegas do Futuro™              360 g | E~  29.9 Prato         http~
-#>  8 11    Porção De Kibe De Berinjela        300 g | 6~  26.9 Prato         http~
-#>  9 40    Mousse de Maracujá                 Creme de ~   9.5 Doce          http~
-#> 10 42    Creme de Cenoura                   Leite de ~  16.9 Sopa          http~
-#> 11 5     Maklub com Falafel e Pasta de Tofu 340 g | A~  31.9 Prato         http~
-#> 12 38    Brownie de Chocolate e Nozes       Chocolate~   8.9 Doce          http~
+#>    item  nome                                descricao preco tipo_refeicao url  
+#>    <chr> <chr>                               <chr>     <dbl> <chr>         <chr>
+#>  1 33    Minestrone                          Espinafr~  16.9 Sopa          http~
+#>  2 26    Yakisoba                            360 g | ~  26.9 Prato         http~
+#>  3 3     Sugestão do Chef                    5 refeiç~ 154.  Prato         http~
+#>  4 37    Torta de Mousse de Chocolate Sem A~ Aveia, L~  10.5 Doce          http~
+#>  5 6     Falafel ao Molho de Hortelã         360 g | ~  31.9 Prato         http~
+#>  6 30    Tofu Tikka Masala                   360 g | ~  27.7 Prato         http~
+#>  7 9     Porção de Moqueca de Coração de Pu~ 220 g | ~  23.9 Prato         http~
+#>  8 8     Porção De Strogonoff Dois Cogumelos 220 g | ~  19.9 Prato         http~
+#>  9 42    Creme de Cenoura                    Leite de~  16.9 Sopa          http~
+#> 10 2     Picadinho De Carne Do Mato Ao Vinho 360 g | ~  29.9 Prato         http~
+#> 11 36    Torta de Maçã com Especiarias       Açúcar D~   8.9 Doce          http~
+#> 12 3     Sugestão do Chef                    5 refeiç~ 154.  Prato         http~
 ```
