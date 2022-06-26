@@ -18,7 +18,9 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-O objetivo do pacote é disponibilizar a base de dados de marmitas veganas. Os dados foram obtidos no site [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas).
+O objetivo do pacote é disponibilizar a base de dados de marmitas veganas. 
+
+Os dados foram obtidos no site [beleaf](https://www.beleaf.com.br/cardapio-marmitas-veganas).
 
 ## Instalação
 

@@ -26,7 +26,10 @@ buscar_marmitas_veganas <- function() {
     purrr::map_dfr(~ tibble::enframe(purrr::set_names(.x, nm)), .id = "item") %>%
     tidyr::pivot_wider() %>%
     dplyr::mutate(
-      preco = readr::parse_number(preco, locale = readr::locale(decimal_mark = ",")),
+      preco = readr::parse_number(
+        stringr::str_trim(stringr::str_extract(preco,"[A-Z].+\\s")),
+        locale = readr::locale(decimal_mark = ",")),
+      #preco = readr::parse_number(preco, locale = readr::locale(decimal_mark = ",")),
       tipo_refeicao = dplyr::case_when(
         stringr::str_detect(nome, "Bolo|Mousse|Brownie|Cheesecake|Torta") ~ "Doce",
         stringr::str_detect(nome, "Creme de|Minestrone") ~ "Sopa",
