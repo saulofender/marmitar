@@ -41,19 +41,19 @@ marmitar::sortear_marmita(tipo = "Sopa")
 #> 
 #> Ingredientes: Espinafre, abobrinha e feijão branco 
 #> 
-#> Preco: R$ -10 
+#> Preco: R$ 16.9 
 #> 
 #> Acesse o site: https://www.beleaf.com.br/minestrone
 
-# só quero gastar R$:
+# só quero gastar até R$:
 marmitar::sortear_marmita(preco_maximo = 22)
-#> Refeicao  sugerida: Tutu de Feijão e Tofu Defumado 
+#> Refeicao  sugerida: Bolo de Banana com Amêndoas e Sem Açúcar 
 #> 
-#> Ingredientes: 360 g | Arroz integral, couve, abóbora e banana glaceadas 
+#> Ingredientes: Aveia, Linhaça, Chia E Canela - Sem Açúcar 
 #> 
-#> Preco: R$ -10 
+#> Preco: R$ 8.9 
 #> 
-#> Acesse o site: https://www.beleaf.com.br/tutu-de-feijao-e-tofu-defumado
+#> Acesse o site: https://www.beleaf.com.br/bolo-de-banana-com-am-ndoas-e-sem-acucar
 ```
 
 E por fim, também é possível sortear combos de 12, 21 ou 30 marmitas com
@@ -63,18 +63,18 @@ a função `sortear_combo_marmitas()`
 # sortear um combo de 12 marmitas
 marmitar::sortear_combo_marmitas(12)
 #> # A tibble: 12 x 6
-#>    item  nome                                descricao preco tipo_refeicao url  
-#>    <chr> <chr>                               <chr>     <dbl> <chr>         <chr>
-#>  1 37    Torta de Mousse de Chocolate Sem A~ Aveia, L~   -10 Doce          http~
-#>  2 8     Porção De Strogonoff Dois Cogumelos 220 g | ~   -10 Prato         http~
-#>  3 22    Poke de Atum do Futuro™             360 g | ~   -10 Prato         http~
-#>  4 21    Frango Vegetal Desfiado com Creme ~ 340 g | ~   -10 Sopa          http~
-#>  5 2     Picadinho De Carne Do Mato Ao Vinho 360 g | ~   -10 Prato         http~
-#>  6 2     Picadinho De Carne Do Mato Ao Vinho 360 g | ~   -10 Prato         http~
-#>  7 24    Macaroni com Cheddar de Castanhas   320 g | ~   -10 Prato         http~
-#>  8 9     Porção de Moqueca de Coração de Pu~ 220 g | ~   -10 Prato         http~
-#>  9 14    Porção de Bobó de Banana da Terra   220 g | ~   -10 Prato         http~
-#> 10 8     Porção De Strogonoff Dois Cogumelos 220 g | ~   -10 Prato         http~
-#> 11 5     Maklub com Falafel e Pasta de Tofu  340 g | ~   -10 Prato         http~
-#> 12 13    Porção de Feijuca do Futuro         220 g | ~   -10 Prato         http~
+#>    item  nome                               descricao  preco tipo_refeicao url  
+#>    <chr> <chr>                              <chr>      <dbl> <chr>         <chr>
+#>  1 15    Baião de Dois                      310 g | M~  27.7 Prato         http~
+#>  2 22    Poke de Atum do Futuro™            360 g | E~  29.9 Prato         http~
+#>  3 34    Cheesecake de Amora                Biomassa ~  10.5 Doce          http~
+#>  4 3     Sugestão do Chef                   5 refeiçõ~ 154.  Prato         http~
+#>  5 17    Moqueca de Coração de Pupunha      360 g | A~  29.9 Prato         http~
+#>  6 29    Couve-Flor e Grão de Bico ao Curry 360 g | C~  24.9 Prato         http~
+#>  7 28    Almôndegas do Futuro™              360 g | E~  29.9 Prato         http~
+#>  8 11    Porção De Kibe De Berinjela        300 g | 6~  26.9 Prato         http~
+#>  9 40    Mousse de Maracujá                 Creme de ~   9.5 Doce          http~
+#> 10 42    Creme de Cenoura                   Leite de ~  16.9 Sopa          http~
+#> 11 5     Maklub com Falafel e Pasta de Tofu 340 g | A~  31.9 Prato         http~
+#> 12 38    Brownie de Chocolate e Nozes       Chocolate~   8.9 Doce          http~
 ```

@@ -46,7 +46,7 @@ Caso queira você também poderá usar a função `sortear_marmita()`para sortea
 # só uma sopinha:
 marmitar::sortear_marmita(tipo = "Sopa")
 
-# só quero gastar R$:
+# só quero gastar até R$:
 marmitar::sortear_marmita(preco_maximo = 22)
 ```
 
@@ -56,4 +56,3 @@ E por fim, também é possível sortear combos de 12, 21 ou 30 marmitas com a fu
 # sortear um combo de 12 marmitas
 marmitar::sortear_combo_marmitas(12)
 ```
-
