@@ -62,8 +62,7 @@
 </h1></div>
 <!-- badges: start -->
 <!-- badges: end -->
-<p>O objetivo do pacote é disponibilizar a base de dados de marmitas veganas.</p>
-<p>Os dados foram obtidos no site <a href="https://www.beleaf.com.br/cardapio-marmitas-veganas" class="external-link">beleaf</a>.</p>
+<p>O objetivo do pacote é disponibilizar a base de dados de marmitas veganas. Os dados foram obtidos no site <a href="https://www.beleaf.com.br/cardapio-marmitas-veganas" class="external-link">beleaf</a>.</p>
 <div class="section level2">
 <h2 id="instalação">Instalação<a class="anchor" aria-label="anchor" href="#instala%C3%A7%C3%A3o"></a>
 </h2>
@@ -71,7 +70,7 @@
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages("devtools")</span>
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu"><a href="https://devtools.r-lib.org/reference/remote-reexports.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"saulofender/marmitar"</span><span class="op">)</span>
-<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va">marmitar</span><span class="op">)</span></code></pre></div>
+<span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/saulofender/marmitar" class="external-link">marmitar</a></span><span class="op">)</span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="exemplo">Exemplo<a class="anchor" aria-label="anchor" href="#exemplo"></a>
@@ -83,23 +82,23 @@
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># só uma sopinha:</span>
 <span class="fu">marmitar</span><span class="fu">::</span><span class="fu"><a href="reference/sortear_marmita.html">sortear_marmita</a></span><span class="op">(</span>tipo <span class="op">=</span> <span class="st">"Sopa"</span><span class="op">)</span>
-<span class="co">#&gt; Refeicao  sugerida: Creme de Abóbora </span>
+<span class="co">#&gt; Refeicao  sugerida: Frango Vegetal Desfiado com Creme de Milho </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Ingredientes: Semente de chia e gengibre </span>
+<span class="co">#&gt; Ingredientes: 340 g | Vagem e espinafre refogados. </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Preco: R$ -10 </span>
+<span class="co">#&gt; Preco: R$ 30.9 </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Acesse o site: https://www.beleaf.com.br/creme-de-abobora</span>
+<span class="co">#&gt; Acesse o site: https://www.beleaf.com.br/frango-vegetal-desfiado-com-creme-de-milho</span>
 
-<span class="co"># só quero gastar R$:</span>
+<span class="co"># só quero gastar até R$:</span>
 <span class="fu">marmitar</span><span class="fu">::</span><span class="fu"><a href="reference/sortear_marmita.html">sortear_marmita</a></span><span class="op">(</span>preco_maximo <span class="op">=</span> <span class="fl">22</span><span class="op">)</span>
-<span class="co">#&gt; Refeicao  sugerida: Macaroni com Cheddar de Castanhas </span>
+<span class="co">#&gt; Refeicao  sugerida: Torta de Maçã com Especiarias </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Ingredientes: 320 g | Farofa de sementes e espinafre refogado </span>
+<span class="co">#&gt; Ingredientes: Açúcar Demerara, Aveia e Linhaça </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Preco: R$ -10 </span>
+<span class="co">#&gt; Preco: R$ 8.9 </span>
 <span class="co">#&gt; </span>
-<span class="co">#&gt; Acesse o site: https://www.beleaf.com.br/macaroni-com-cheddar-de-castanhas</span></code></pre></div>
+<span class="co">#&gt; Acesse o site: https://www.beleaf.com.br/torta-de-mac-com-especiarias</span></code></pre></div>
 <p>E por fim, também é possível sortear combos de 12, 21 ou 30 marmitas com a função <code><a href="reference/sortear_combo_marmitas.html">sortear_combo_marmitas()</a></code></p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># sortear um combo de 12 marmitas</span>
@@ -107,18 +106,18 @@
 <span class="co">#&gt; # A tibble: 12 x 6</span>
 <span class="co">#&gt;    item  nome                                descricao preco tipo_refeicao url  </span>
 <span class="co">#&gt;    &lt;chr&gt; &lt;chr&gt;                               &lt;chr&gt;     &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;</span>
-<span class="co">#&gt;  1 21    Frango Vegetal Desfiado com Creme ~ 340 g | ~  -10  Sopa          http~</span>
-<span class="co">#&gt;  2 29    Couve-Flor e Grão de Bico ao Curry  360 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt;  3 32    Creme de Abóbora                    Semente ~  -10  Sopa          http~</span>
-<span class="co">#&gt;  4 11    Porção De Kibe De Berinjela         300 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt;  5 31    Paella de Frutos do Mato            360 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt;  6 9     Porção de Moqueca de Coração de Pu~ 220 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt;  7 19    Tagliatelle ao Funghi               320 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt;  8 20    Feijuca do Futuro™                  320 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt;  9 41    Nhoque com Cogumelo Portobello      360 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt; 10 1     Kit Vegflix - Season 2              4 refeiç~  120. Prato         http~</span>
-<span class="co">#&gt; 11 10    Porção De Falafel                   200 g | ~  -10  Prato         http~</span>
-<span class="co">#&gt; 12 32    Creme de Abóbora                    Semente ~  -10  Sopa          http~</span></code></pre></div>
+<span class="co">#&gt;  1 33    Minestrone                          Espinafr~  16.9 Sopa          http~</span>
+<span class="co">#&gt;  2 26    Yakisoba                            360 g | ~  26.9 Prato         http~</span>
+<span class="co">#&gt;  3 3     Sugestão do Chef                    5 refeiç~ 154.  Prato         http~</span>
+<span class="co">#&gt;  4 37    Torta de Mousse de Chocolate Sem A~ Aveia, L~  10.5 Doce          http~</span>
+<span class="co">#&gt;  5 6     Falafel ao Molho de Hortelã         360 g | ~  31.9 Prato         http~</span>
+<span class="co">#&gt;  6 30    Tofu Tikka Masala                   360 g | ~  27.7 Prato         http~</span>
+<span class="co">#&gt;  7 9     Porção de Moqueca de Coração de Pu~ 220 g | ~  23.9 Prato         http~</span>
+<span class="co">#&gt;  8 8     Porção De Strogonoff Dois Cogumelos 220 g | ~  19.9 Prato         http~</span>
+<span class="co">#&gt;  9 42    Creme de Cenoura                    Leite de~  16.9 Sopa          http~</span>
+<span class="co">#&gt; 10 2     Picadinho De Carne Do Mato Ao Vinho 360 g | ~  29.9 Prato         http~</span>
+<span class="co">#&gt; 11 36    Torta de Maçã com Especiarias       Açúcar D~   8.9 Doce          http~</span>
+<span class="co">#&gt; 12 3     Sugestão do Chef                    5 refeiç~ 154.  Prato         http~</span></code></pre></div>
 </div>
 </div>
   </main><aside class="col-md-3"><div class="links">
